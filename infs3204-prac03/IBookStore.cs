@@ -13,6 +13,15 @@ namespace infs3204_prac03
     {
         [OperationContract]
         Book[] GetAllBooks();
+
+        [OperationContract]
+        bool AddBook(string ID, string name, string author, int year, float price, int stock);
+
+        [OperationContract]
+        bool DeleteBook(string field, string value);
+
+        [OperationContract]
+        Book[] SearchBook(string field, string value);
     }
 
     [DataContract]
